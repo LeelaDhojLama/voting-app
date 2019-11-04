@@ -16,12 +16,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+//Api main route
 app.get('/',(req,res) => res.json({ 'id':1,'name':'Ram Thapa' }))
 app.use('/api/auth',routes.auth);
 app.use('/api/poll',routes.poll)
-
+//Basic Server function handle
 app.use(handle.notFound);
-
 app.use(handle.errorHandler);
-
+//Listen to Server
 app.listen(port,console.log(`Server started on port ${port}`))
