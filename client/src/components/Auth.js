@@ -36,16 +36,17 @@ class Auth extends Component{
 
         return(<React.Fragment>
             <form onSubmit={this.handleSubmit}>
-                <label for="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <input type="text" 
                     value={username} 
                     name="username" 
                     onChange={this.handleChange} 
                 />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input type="password" 
                     value={password} 
                     name="password" 
+                    autoComplete='false'
                     onChange={this.handleChange} 
                 />
                 <button type="submit">Submit</button>
