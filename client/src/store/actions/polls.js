@@ -39,7 +39,7 @@ export const getUserPoll = () =>{
     }
 };
 
-export const setPoll = data =>{
+export const createPoll = data =>{
     return async dispatch=>{
         try {
             const poll = await api.call('post','polls',data);

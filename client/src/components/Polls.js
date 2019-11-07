@@ -16,9 +16,11 @@ class Polls extends Component{
     }
 
     handleSelect(id){
-        const {getCurrentPoll} = this.props;
-        console.log(id);
-        getCurrentPoll(id);
+        // const {getCurrentPoll} = this.props;
+        // console.log(id);
+        // getCurrentPoll(id);
+        const {history} = this.props;
+        history.push(`/poll/${id}`);
     }
 
     render(){
